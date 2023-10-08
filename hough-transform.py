@@ -62,7 +62,6 @@ def draw_lines(image, lines):
 
 
 #yo probability ko laagi try
-
 def hough_lines_p(coordinates, min_line_length, max_line_gap):
     lines = []
 
@@ -148,7 +147,6 @@ line_points = np.array([(rho * np.cos(theta),rho*np.sin(theta)) for rho, theta i
 # perfrom k-mean clustering to spearate lines
 kmeans = KMeans(n_clusters = 2, random_state = 0, n_init="auto").fit(line_points)
 cluster_centers = kmeans.cluster_centers_
-
 
 
 # Create a copy of the original image to draw the lines and intersection points on it
